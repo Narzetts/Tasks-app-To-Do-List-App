@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(135deg, #111, #333);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: changeBackground 10s infinite alternate;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: rgba(0, 150, 255, 0.3); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-out;
+    font-size: 16px;
+    backdrop-filter: blur(5px); 
+}
+
+button:hover {
+    background-color: rgba(0, 150, 255, 0.5); 
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.2s ease-out, opacity 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+span {
+    flex: 1;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+    font-size: 16px;
+}
+
+.checklist-btn, .delete-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease-out;
+}
+
+.checklist-btn:hover, .delete-btn:hover {
+    background-color: #2196F3;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.delete-btn:hover {
+    opacity: 0.8;
+}
